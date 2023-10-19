@@ -1,6 +1,19 @@
 import math
-def szamok(szam1, szam2):
-    i: int= int(szam1) + 1
-    while i < szam2:
-        print(i, end=',')
+def szamok(a:int , b:int):
+    if a==b:
+        print("A két szám egyenlő!")
+        return
+    
+    if a>b:
+        csere: float = a
+        a = b
+        b = csere
+
+    i: int= math.ceil(a)
+
+    while i < b:
+        if(i==b-1):
+            print(i)
+        else:
+            print(i,end=', ')
         i+=1

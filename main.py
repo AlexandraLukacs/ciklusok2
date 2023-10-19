@@ -5,9 +5,14 @@
     és
     az eljárás kiírja az egész számokat ezen két paraméter között.
 '''
-
-szam1: int= int(input("Adjon meg egy számot: "))
-szam2: int= int(input("Adjon meg még egy számot: "))
-
 import ciklusok
-ciklusok.szamok(szam1, szam2)
+
+a: int= int(input("Adjon meg egy számot (a) : "))
+
+b: int= int(input("Adjon meg még egy számot (b) : "))
+""" A felhasználó csak olyan b-t tudjon megadni, ami nagyobb, mint az a """
+while (a>b):
+    print("b-nek nagyobbnak kell lennie a-nál")
+    b:int = int(input(f"Adj {a}-nál nagyobbat! "))
+
+ciklusok.szamok(a, b)
